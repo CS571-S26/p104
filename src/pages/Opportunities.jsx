@@ -1,4 +1,5 @@
-import { Container, ListGroup, Badge } from 'react-bootstrap';
+import { Container, ListGroup } from 'react-bootstrap';
+import EventItem from '../components/EventItem';
 
 function Opportunities() {
   const events = [
@@ -8,18 +9,17 @@ function Opportunities() {
   ];
 
   return (
-    <Container>
+    <Container className="mt-4">
       <h2 className="mb-4 fw-bold">Upcoming Opportunities</h2>
-      <ListGroup variant="flush" className="shadow-sm rounded">
+      <ListGroup variant="flush">
         {events.map(event => (
-          <ListGroup.Item key={event.id} className="p-4">
-            <div className="d-flex justify-content-between align-items-start mb-2">
-              <h5 className="fw-bold mb-0">{event.title}</h5>
-              <Badge bg="primary">{event.type}</Badge>
-            </div>
-            <div className="text-muted mb-2"><strong>Date:</strong> {event.date}</div>
-            <p className="mb-0">{event.desc}</p>
-          </ListGroup.Item>
+          <EventItem 
+            key={event.id}
+            title={event.title}
+            date={event.date}
+            type={event.type}
+            desc={event.desc}
+          />
         ))}
       </ListGroup>
     </Container>
