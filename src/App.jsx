@@ -6,6 +6,7 @@ import About from './pages/About';
 import Opportunities from './pages/Opportunities';
 import MemberNetwork from './pages/MemberNetwork';
 import RSVP from './pages/RSVP';
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
