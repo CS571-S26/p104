@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Opportunities from './pages/Opportunities';
+import ProjectsGallery from './pages/ProjectsGallery';
 import MemberNetwork from './pages/MemberNetwork';
 import RSVP from './pages/RSVP';
 import './App.css';
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/opportunities" element={<Opportunities />} />
+            <Route path="/gallery" element={<ProjectsGallery />} />
             <Route path="/network" element={<MemberNetwork />} />
             <Route path="/rsvp" element={<RSVP />} />
           </Routes>

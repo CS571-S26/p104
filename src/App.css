@@ -1,15 +1,57 @@
-/* 마우스 오버 시 카드가 위로 떠오르는 효과 */
+/* 학술적인 느낌의 세리프 폰트 불러오기 (영문: Merriweather, 국문: Noto Serif KR) */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Noto+Serif+KR:wght@300;400;700&display=swap');
+
+/* 글로벌 변수 설정 */
+:root {
+  --ksea-blue: #0f3d7a; /* 전문적이고 깊이 있는 KSEA 네이비 블루 */
+  --ksea-red: #C5050C;  /* UW-Madison Badger Red (포인트 컬러) */
+  --ksea-light: #f8f9fa;
+}
+
+/* 전체 폰트 적용 */
+body {
+  font-family: 'Merriweather', 'Noto Serif KR', serif !important;
+  background-color: var(--ksea-light);
+  color: #333;
+}
+
+/* Bootstrap Primary 컬러를 KSEA 블루로 덮어쓰기 */
+.bg-primary { background-color: var(--ksea-blue) !important; }
+.text-primary { color: var(--ksea-blue) !important; }
+.btn-primary { 
+  background-color: var(--ksea-blue) !important; 
+  border-color: var(--ksea-blue) !important; 
+}
+.btn-primary:hover { background-color: #0b2e5e !important; }
+
+/* 뱃지(Badge) 컬러 덮어쓰기 */
+.badge.bg-primary { background-color: var(--ksea-blue) !important; }
+
+/* 포인트(Accent) 컬러 클래스 새로 만들기 */
+.text-accent { color: var(--ksea-red) !important; }
+.bg-accent { background-color: var(--ksea-red) !important; color: white; }
+.btn-accent {
+  background-color: var(--ksea-red) !important;
+  border-color: var(--ksea-red) !important;
+  color: white;
+}
+.btn-accent:hover {
+  background-color: #9e040a !important;
+  color: white;
+}
+
+/* 마우스 오버 효과 유지 */
 .hover-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
 }
-
 .hover-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* 홈 화면의 배경 그라데이션 */
+/* 홈 화면 배너 배경 (파란색 그라데이션) */
 .hero-gradient {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(135deg, #0f3d7a 0%, #1a5bb8 100%);
   border-radius: 1rem;
 }
